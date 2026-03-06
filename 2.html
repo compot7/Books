@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хамелион</title>
+    <link rel="icon" type="image/png" href="./assets/img/icon.png" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+            overflow: hidden;
+        }
+
+        #loader {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 10000;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #ccc;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #ccc transparent transparent transparent;
+        }
+
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104276774', 'ym');
+
+        ym(104276774, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+
+    <!-- /Yandex.Metrika counter -->
+
+    <link rel="next" href="/assets/index.html">
+    <script>
+        const menuToggle = () => {
+            let menuStyle = document.getElementById("UI__sidebar").classList;
+            if (menuStyle.contains("open")) {
+                menuStyle.remove("open");
+            } else {
+                menuStyle.add("open");
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("loader").remove();
+        };
+
+
+    </script>
+    <script type="module" crossorigin src="./assets/main2.js"></script>
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/2.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="UI">
+        <div id="UI__sidebar">
+            <button id="UI__menu-button" class="button-blue top-right" aria-label="Открыть содержание"
+                onclick="menuToggle()"><img draggable="false" src="./svg/UI/hamburger.svg" alt="" /></button>
+            <div id="UI__table-of-content" class="wrapper">
+                <span class="heading">Содержание</span>
+                <div class="progress-box">
+                    <div class="progress-box__text">
+                        <span class="first-page">1</span>
+                        <span class="last-page">11</span>
+                    </div>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="content">
+                    <div class="content__chapter">
+                        <img draggable="false" class="preview" id="chapter-one"
+                            src="./assets/img/table-of-content/page-1.webp"
+                            srcset="./assets/img/table-of-content/page-1-small.webp 2x" />
+                    </div>
+                    <a draggable="false" href="index.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>0</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-index"
+                                src="./assets/img/table-of-content/page-index.webp"
+                                srcset="./assets/img/table-of-content/page-index-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="1.html">
+                        <div class="content__page active">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>1</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-one"
+                                src="./assets/img/table-of-content/page-1.webp"
+                                srcset="./assets/img/table-of-content/page-1-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="2.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>2</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-two"
+                                src="./assets/img/table-of-content/page-2.webp"
+                                srcset="./assets/img/table-of-content/page-2-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="3.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>3</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-three"
+                                src="./assets/img/table-of-content/page-3.webp"
+                                srcset="./assets/img/table-of-content/page-3-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="4.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>4</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-four"
+                                src="./assets/img/table-of-content/page-4.webp"
+                                srcset="./assets/img/table-of-content/page-4-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="5.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>5</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-five"
+                                src="./assets/img/table-of-content/page-5.webp"
+                                srcset="./assets/img/table-of-content/page-5-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="6.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>6</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-six"
+                                src="./assets/img/table-of-content/page-6.webp"
+                                srcset="./assets/img/table-of-content/page-6-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="7.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>7</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-seven"
+                                src="./assets/img/table-of-content/page-7.webp"
+                                srcset="./assets/img/table-of-content/page-7-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="8.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>8</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-eight"
+                                src="./assets/img/table-of-content/page-8.webp"
+                                srcset="./assets/img/table-of-content/page-8-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="9.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>9</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-nine"
+                                src="./assets/img/table-of-content/page-9.webp"
+                                srcset="./assets/img/table-of-content/page-9-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="10.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>10</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-10.webp"
+                                srcset="./assets/img/table-of-content/page-10-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="11.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>11</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-11.webp"
+                                srcset="./assets/img/table-of-content/page-11-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="12.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>12</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-12.webp"
+                                srcset="./assets/img/table-of-content/page-12-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="13.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>13</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-13.webp"
+                                srcset="./assets/img/table-of-content/page-13-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="14.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>14</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-14.webp"
+                                srcset="./assets/img/table-of-content/page-14-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="15.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>15</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-15.webp"
+                                srcset="./assets/img/table-of-content/page-15-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="16.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>16</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-16.webp"
+                                srcset="./assets/img/table-of-content/page-16-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                    <a draggable="false" href="17.html">
+                        <div class="content__page">
+                            <img draggable="false" src="./svg/UI/tocPlay.svg" class="content__play" />
+                            <span>17</span>
+                            <img draggable="false" class="preview" id="chapter-one--page-ten"
+                                src="./assets/img/table-of-content/page-17.webp"
+                                srcset="./assets/img/table-of-content/page-17-small.webp 2x" />
+                            <img draggable="false" src="./svg/UI/tocFavorite.svg" class="content__favorite" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="UI__navigation" class="click">
+            <button id="UI__previous-page-button" class="button-blue bottom"
+                onclick="window.history.go(-1); return false;">
+                <img draggable="false" src="./svg/UI/arrowLeft.svg" alt="" />
+            </button>
+            <button id="UI__go-top-button" class="button-blue bottom">
+                <img draggable="false" src="./svg/UI/arrowUp.svg" alt="" />
+            </button>
+            <button id="UI__next-page-button" class="button-black bottom" onclick="window.location.href='2.html' ">
+                <span>ЧИТАТЬ ДАЛЕЕ</span>
+                <img draggable="false" src="./svg/UI/arrowRight.svg" alt="" />
+            </button>
+            <button id="UI__go-bottom-button" class="button-black bottom">
+                <img draggable="false" src="./svg/UI/scroll.svg" alt="" />
+                <img draggable="false" src="./svg/UI/arrowDown.svg" alt="" />
+            </button>
+            <button id="UI__favorite-button" class="button-blue bottom">
+                <img draggable="false" src="./svg/UI/favorite.svg" alt="" />
+            </button>
+        </div>
+    </div>
+    <main>
+      <div id="content">
+        
+          <section id="heading">
+            <div id="textbox">
+            <div class="Letter" >
+                <img id="Letter1"  src="./assets/img/page-2/Letter1.svg" alt="Letter1"/>
+                 <!--<img id="LetterImg"  src="./assets/img/page-1/LetterImg.png" alt="LetterTwig"/> **-->
+            </div>
+              <p>
+                &emsp;&emsp;&nbsp;
+                чумелов делает полуоборот налево и шагает к сборищу. Около самых ворот склада, видит он, стоит вышеписанный человек в расстёгнутой жилетке и, подняв вверх правую руку, показывает толпе окровавленный палец. На полупьяном лице его как бы написано: «Ужо я сорву с тебя, шельма!» да и самый палец имеет вид знамения победы. В этом человеке Очумелов узнает золотых дел мастера Хрюкина. В центре толпы, растопырив передние ноги и дрожа всем телом, сидит на земле сам виновник скандала — белый борзой щенок с острой мордой и жёлтым пятном на спине. В слезящихся глазах его выражение тоски и ужаса.
+              </p>
+              <p>
+                — По какому это случаю тут? — спрашивает Очумелов, врезываясь в толпу.— Почему тут? Это ты зачем палец?‥ Кто кричал?
+              </p>
+              <p>
+                — Иду я, ваше благородие, никого не трогаю…— начинает Хрюкин, кашляя в кулак.— Насчёт дров с Митрий Митричем,— и вдруг эта подлая ни с того, ни с сего за палец… Вы меня извините, я человек, который работающий… Работа у меня мелкая. Пущай мне заплатят, потому — я этим пальцем, может, неделю не пошевельну… Этого, ваше благородие, и в законе нет, чтоб от твари терпеть… Ежели каждый будет кусаться, то лучше и не жить на свете…
+              </p>
+              <p>
+                — Гм!‥ Хорошо…— говорит Очумелов строго, кашляя и шевеля бровями. — Хорошо… Чья собака? Я этого так не оставлю. Я покажу вам, как собак распускать! Пора обратить внимание на подобных господ, не желающих подчиняться постановлениям! Как оштрафуют его, мерзавца, так он узнает у меня, что значит собака и прочий бродячий скот! Я ему покажу Кузькину мать!‥ Елдырин,— обращается надзиратель к городовому,— узнай, чья это собака, и составляй протокол! А собаку истребить надо. Немедля! Она наверное бешеная… Чья это собака, спрашиваю?
+              </p>
+              <!--<img id="underText"  src="./assets/img/page-1/UnderTextPicture.png" alt="Twig"/> -->
+            </div>
+          </section>
+      </div>
+      <div id="scene" class="scene">
+        <!--<img src="" alt="" id="" class="">-->
+        <img src="assets\img\texture.png" alt="texture" id="texture" class="texture">
+        <img src="assets/img/page-2/bg-2.png" alt="bg-2" id="bg-2" class="bg-2">
+        <img src="assets\img\page-2\finger.png" alt="finger" id="finger" class="finger">
+        <img src="assets\img\page-2\dog-biting.png" alt="dog-biting" id="dog-biting" class="dog-biting">
+      </div>
+      <script src="./assets/page1.js"></script>
+
+      <div id="content-mobile">
+          <section id="heading-mobile">
+            <div id="textbox">
+            <div class="Letter" >
+                <img id="Letter1"  src="./assets/img/page-1/Letter1.png" alt="Letter1"/>
+                <img id="LetterTwig"  src="./assets/img/page-1/LetterTwig.png" alt="LetterTwig"/>
+            </div>
+            <p>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+            </p>
+            <p>
+
+            </p>
+            <p>
+
+            </p>
+              <img id="underText"  src="./assets/img/page-1/UnderTextPicture.png" alt="Twig"/>
+            </div>
+          </section>
+      </div>
+
+    </main>
+    <noscript><div><img src="https://mc.yandex.ru/watch/104276774" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+
+</html>

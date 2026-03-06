@@ -1,0 +1,251 @@
+#UI .progress-bar {
+    width: 8.33%
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1.0);
+    overflow:hidden;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    background: rgba(0, 0, 0, 1.0);
+
+}
+
+#content #heading {
+    position: absolute;
+    left: 21.406%;
+    top: 19.537%;
+    width: 33.75%;
+    height: 62.685%;
+    display: flex;
+    padding: calc(10px + 16 * ((100vw - 767px) / (1920 - 767)));
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.0);
+
+}
+#content #heading #textbox {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+#content #heading h1 {
+    color: var(--bk-text, #FEA30C);
+    text-align: center;
+    font-family: "PT Astra Serif";
+    font-size: calc(50px + 60 * ((100vw - 767px) / (1920 - 767)));
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+
+#content #heading p {
+    vertical-align: middle;
+    color: var(--bk-text, #FFF8EB);
+    font-family: "PT Astra Sans";
+    font-style: normal;
+    line-height: 115%;
+    font-size: calc(16px + 8 * ((100vw - 767px) / (1920 - 767)));
+    box-sizing: border-box;
+
+}
+
+#credits-container {
+  width: 90%;
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 20px 0;
+
+}
+
+ #content #heading #textbox #credit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--bk-text, #FFF8EB);
+  font-style: normal;
+  line-height: 115%;
+  font-size: calc(16px + 8 * ((100vw - 767px) / (1920 - 767)));
+  margin: 12px 0;
+  font-family: "PT Astra Sans";
+
+}
+
+#upperText {
+  position: relative;
+  width: 37.65%;
+  left: 31.175%;
+  margin-top: 0%;
+}
+#dot{
+  position: relative;
+  left: 50%;
+  margin-top: 5.908%;
+
+}
+
+#underText {
+  position: relative;
+  width: 37.65%;
+  left: 31.175%;
+  margin-bottom: 0%;
+}
+
+#skulls {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 38.229%;
+/*max-height: 95.925%; */
+
+}
+#yaga {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 47.604%;
+/*  max-height: 91.941%; */
+}
+
+
+
+
+@media only screen and (min-width: 480px){
+  #content-mobile  {
+    display: none;
+
+  }
+  #content-mobile #heding-mobile  {
+    display: none;
+
+  }
+}
+@media only screen and (max-width: 480px){
+  #content {
+    display: none;
+
+  }
+  #content-mobile {
+      height: 100%;
+      width: 100%;
+      z-index: 4;
+      background: rgba(0, 0, 0, 1.0);
+
+  }
+
+  #content-mobile #heading-mobile {
+      position: relative;
+      left: 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.0);
+
+  }
+  #content-mobile #heading-mobile #textbox-mobile {
+
+    height: 100%;
+    padding: 5.555% 10.111%;
+  }
+
+
+  #content-mobile #heading-mobile h1 {
+      color: var(--bk-text, #FEA30C);
+      text-align: center;
+      font-family: "PT Astra Serif";
+      font-size: calc(50px + 30 * ((100vw - 360px) / (480 - 360)));
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: -1px;
+      margin: 0;
+  }
+
+
+  #content-mobile #heading-mobile p {
+      vertical-align: middle;
+      color: var(--bk-text, #FFF8EB);
+      font-family: "PT Astra Sans";
+      font-style: normal;
+      line-height: 115%;
+      font-size: calc(18px + 4 * ((100vw - 360px) / (480 - 360)));
+      box-sizing: border-box;
+
+  }
+
+  #credits-container-mobile {
+
+    max-width: 420px;
+    padding: 20px 28px;
+
+  }
+
+   #content-mobile #heading-mobile #textbox-mobile #credit-item-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bk-text, #FFF8EB);
+    font-style: normal;
+    line-height: 135%;
+    font-size: calc(18px + 4 * ((100vw - 360px) / (480 - 360)));
+    margin: 12px 0;
+    font-family: "PT Astra Sans";
+
+  }
+
+  #upperText {
+    position: relative;
+    width: 37.65%;
+    left: 31.175%;
+    margin-top: 0%;
+  }
+  #dot{
+    position: relative;
+    left: 50%;
+    margin-top: 5.908%;
+
+  }
+
+  #underText {
+    position: relative;
+    width: 37.65%;
+    left: 31.175%;
+    margin-bottom: 0%;
+  }
+  #skulls-mobile {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 81.944%;
+  height: 23.594%;
+
+  }
+  #yaga-mobile {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 52.762%;
+  }
+
+
+}
+@media only screen and (max-width: 415px){
+
+
+}
