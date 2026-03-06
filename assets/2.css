@@ -83,7 +83,7 @@ body {
 
 .Letter {
   position: relative;
-  top: 4.45%;
+  top: 7.2%;
   width: 18.518%;
   height: auto;
   aspect-ratio: 1/1;
@@ -197,11 +197,10 @@ body {
   #content-mobile {
     display: flex;
     position: relative;
-    max-width: 960px;
     margin: 0 auto;
     width: 100%;
     z-index: 4;
-    background: rgba(0, 0, 0, 1.0);
+    background-image: url(img/text-bg/texture.png);
     overflow-y: scroll;
     align-items: stretch;
     justify-content: center;
@@ -210,9 +209,10 @@ body {
   #content-mobile #heading-mobile {
       display: flex;
       padding: calc(40px + 56 * ((100vw - 480px) / (1080 - 480)));
+      margin-top: -10%;
       flex-direction: column;
       align-items: center;
-      background: rgba(0, 0, 0, 1.0);
+      background-image: url(img/text-bg/texture.png);
   }
   #content-mobile #heading-mobile p {
       vertical-align: middle;
@@ -222,11 +222,12 @@ body {
       line-height: 135%;
       font-size:  calc(24px + 14 * ((100vw - 480px) / (1080 - 480)));
       box-sizing: border-box;
+      margin-bottom: 15%;
   }
   .Letter {
     position: relative;
-    top: 3.45%;
-    width: 18.518%;
+    top: 6%;
+    width: 15.518%;
     height: auto;
     aspect-ratio: 1/1;
 
@@ -255,15 +256,16 @@ body {
       min-height: calc(600px + 200 * ((100vw - 767px) / (1920 - 767)));
       max-width: 840px;
       z-index: 4;
-      background: rgba(0, 0, 0, 1.0);
+      background-image: url(img/text-bg/texture.png);
       overflow-y: scroll;
   }
   #content-mobile #heading-mobile {
       display: flex;
       padding: calc(40px + 56 * ((100vw - 767px) / (1920 - 767)));
+      margin-top: -10%;
+      background-image: url(img/text-bg/texture.png);
       flex-direction: column;
       align-items: center;
-      background: rgba(0, 0, 0, 1.0);
   }
   #content-mobile #heading-mobile p {
       vertical-align: middle;
@@ -273,11 +275,12 @@ body {
       line-height: 135%;
       font-size: calc(18px + 4 * ((100vw - 360px) / (480 - 360)));
       box-sizing: border-box;
+      margin-bottom: 10%;
   }
   .Letter {
     position: relative;
     top: 3.05%;
-    width: 18.518%;
+    width: 15.518%;
     height: auto;
     aspect-ratio: 1/1;
 
@@ -285,8 +288,8 @@ body {
   #Letter1 {
     position: absolute;
     left: auto;
-    top: auto;
-    width: 100%;
+    top: 1%;
+    width: 90%;
     z-index: 4;
 
 
