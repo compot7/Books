@@ -83,7 +83,7 @@ body {
 
 .Letter {
   position: relative;
-  top: 7.2%;
+  top: 10.2%;
   width: 18.518%;
   height: auto;
   aspect-ratio: 1/1;
@@ -143,7 +143,7 @@ body {
   mix-blend-mode: multiply;
 }
 
-#bg-2 {
+#bg-4 {
   position: absolute;
   z-index: 1;
   left: auto;
@@ -151,7 +151,7 @@ body {
   width: 100%;
 }
 
-#dog-biting {
+#frame {
   position: absolute;
   z-index: 1;
   left: auto;
@@ -159,12 +159,20 @@ body {
   width: 100%;
 }
 
-#finger {
+#foto {
   position: absolute;
-  z-index: 1;
-  left: 35%;
-  top: 7%;
-  width: 21%;
+  z-index: 3;
+  left: 31.1%;
+  top: 17.5%;
+  width: 37.76%;
+}
+
+#text {
+  position: absolute;
+  z-index: 4;
+  left: 25.4%;
+  top: 80%;
+  width: 50%;
 }
 
 @media only screen and (min-width: 480px){
@@ -226,7 +234,7 @@ body {
   }
   .Letter {
     position: relative;
-    top: 6%;
+    top: 9%;
     width: 15.518%;
     height: auto;
     aspect-ratio: 1/1;
@@ -279,7 +287,7 @@ body {
   }
   .Letter {
     position: relative;
-    top: 3.05%;
+    top: 9%;
     width: 15.518%;
     height: auto;
     aspect-ratio: 1/1;
@@ -287,7 +295,7 @@ body {
   }
   #Letter1 {
     position: absolute;
-    left: auto;
+    left: 27%;
     top: 1%;
     width: 90%;
     z-index: 4;

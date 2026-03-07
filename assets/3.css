@@ -288,7 +288,7 @@ body {
   }
   #Letter1 {
     position: absolute;
-    left: auto;
+    left: 27%;
     top: 1%;
     width: 90%;
     z-index: 4;
