@@ -1,0 +1,332 @@
+#UI .progress-bar {
+    width: 8.33%
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1.0);
+    overflow:hidden;
+}
+ /* СТИЛИЗАЦИЯ ТЕКСТОВОГО БЛОКА*/
+
+#content {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    min-height: calc(600px + 200 * ((100vw - 767px) / (1920 - 767)));
+    max-width: 840px;
+    z-index: 4;
+    background-image: url(img/text-bg/texture.png);
+    overflow-y: scroll;
+}
+#content::-webkit-scrollbar{
+  width:11px;
+  background-color: rgba(0, 0, 0, 1.0);
+}
+#content::-webkit-scrollbar-track{
+  background-color: rgba(0, 0, 0, 1.0);
+
+}
+#content::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 1.0);
+  -webkit-box-shadow: -2px -2px 6px 2px rgba(139, 144, 148, 0.2) inset;
+  -moz-box-shadow: -2px -2px 6px 2px rgba(139, 144, 148, 0.2) inset;
+  box-shadow: -2px -2px 6px 2px rgba(139, 144, 148, 0.2) inset;
+
+}
+
+#content #heading {
+    display: flex;
+    padding: calc(40px + 56 * ((100vw - 767px) / (1920 - 767)));
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+#content #heading h1 {
+    color: var(--bk-text, #000);
+    text-align: center;
+    font-family: "PT Astra Sans";
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+#content #heading p {
+    vertical-align: middle;
+    color: var(--bk-text, #FFF8EB);
+    font-family: "PT Astra Sans";
+    font-style: normal;
+    line-height: 115%;
+    font-size: calc(16px + 8 * ((100vw - 767px) / (1920 - 767)));
+    box-sizing: border-box;
+}
+#content::-webkit-scrollbar{   /* стилизация скроллбара в контенте*/
+  width:12px
+
+}
+#content::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, 1.0);
+
+}
+#content::-webkit-scrollbar-thumb{
+  background: rgba(0, 0, 0, 1.0);
+
+}
+
+.Letter {
+  position: relative;
+  top: 10.2%;
+  width: 18.518%;
+  height: auto;
+  aspect-ratio: 1/1;
+
+}
+#Letter1 {
+  position: absolute;
+  left: auto;
+  top: auto;
+  width: 100%;
+  z-index: 4;
+  bottom: 30%;
+
+}
+#LetterImg {
+  position: absolute;
+  right: -80%;
+  top: auto;
+  width:98%;
+  z-index: 3;
+
+
+}
+#underText {
+  position: relative;
+  width: 37.65%;
+  left: 31.175%;
+  margin-bottom: 7.692%;
+}
+
+/* СТИЛИЗАЦИЯ БЛОКА СЦЕНЫ */
+
+.scene {
+  position: relative;
+  max-width: 1080px;
+  max-height: 1080px;
+  aspect-ratio: 1/1;
+}
+.image {
+  position: absolute;
+  z-index: 4;
+
+}
+
+#Image1 {
+  left: 4.351%;
+  top: 3.055%;
+  width: 15.929%;
+}
+
+#texture {
+  position: absolute;
+  z-index: 10;
+  left: auto;
+  top: auto;
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+#bg {
+  position: absolute;
+  z-index: 1;
+  left: auto;
+  top: auto;
+  width: 100%;
+}
+
+#dog {
+  position: absolute;
+  z-index: 3;
+  left: 18%;
+  top: 69%;
+  width: 33%;
+}
+
+#Hrukin {
+  position: absolute;
+  z-index: 2;
+  left: 9%;
+  top: 40%;
+  width: 22%;
+}
+
+#Ochumelov_leaves {
+  position: absolute;
+  z-index: 4;
+  left: 72.5%;
+  top: 30%;
+  width: 28%;
+}
+#Prohor {
+  position: absolute;
+  z-index: 2;
+  left: 43%;
+  top: 41%;
+  width: 34%;
+}
+
+@media only screen and (min-width: 480px){
+  #content-mobile #heading-mobile {
+    display: none;
+
+  }
+}
+@media screen and (orientation: portrait) {
+  #content {
+    display: none;
+
+  }
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    overflow-y: auto;
+  }
+  #content-mobile #heading-mobile {
+    display: block;
+
+  }
+  .scene {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    aspect-ratio: 1/1;
+  }
+  #content-mobile {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 4;
+    background-image: url(img/text-bg/texture.png);
+    overflow-y: scroll;
+    align-items: stretch;
+    justify-content: center;
+    min-height: calc(500px + 300 * ((100vw - 480px) / (1080 - 480)));
+  }
+  #content-mobile #heading-mobile {
+      display: flex;
+      padding: calc(40px + 56 * ((100vw - 480px) / (1080 - 480)));
+      margin-top: -10%;
+      flex-direction: column;
+      align-items: center;
+      background-image: url(img/text-bg/texture.png);
+  }
+  #content-mobile #heading-mobile p {
+      vertical-align: middle;
+      color: var(--bk-text, #FFFfff);
+      font-family: "PT Astra Sans";
+      font-style: normal;
+      line-height: 135%;
+      font-size:  calc(24px + 14 * ((100vw - 480px) / (1080 - 480)));
+      box-sizing: border-box;
+      margin-bottom: 15%;
+  }
+  .Letter {
+    position: relative;
+    top: 9%;
+    width: 15.518%;
+    height: auto;
+    aspect-ratio: 1/1;
+
+  }
+}
+@media only screen and (max-width: 480px){
+  main {
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  #content {
+    display: none;
+
+  }
+  .scene {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  #content-mobile {
+    position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      min-height: calc(600px + 200 * ((100vw - 767px) / (1920 - 767)));
+      max-width: 840px;
+      z-index: 4;
+      background-image: url(img/text-bg/texture.png);
+      overflow-y: scroll;
+  }
+  #content-mobile #heading-mobile {
+      display: flex;
+      padding: calc(40px + 56 * ((100vw - 767px) / (1920 - 767)));
+      margin-top: -10%;
+      background-image: url(img/text-bg/texture.png);
+      flex-direction: column;
+      align-items: center;
+  }
+  #content-mobile #heading-mobile p {
+      vertical-align: middle;
+      color: var(--bk-text, #FFFfff);
+      font-family: "PT Astra Sans";
+      font-style: normal;
+      line-height: 135%;
+      font-size: calc(18px + 4 * ((100vw - 360px) / (480 - 360)));
+      box-sizing: border-box;
+      margin-bottom: 10%;
+  }
+  .Letter {
+    position: relative;
+    top: 9%;
+    width: 15.518%;
+    height: auto;
+    aspect-ratio: 1/1;
+
+  }
+  #Letter1 {
+    position: absolute;
+    left: 27%;
+    top: 1%;
+    width: 90%;
+    z-index: 4;
+
+
+  }
+  #LetterTwig {
+    position: absolute;
+    right: -80%;
+    top: auto;
+    width:98%;
+    z-index: 3;
+
+
+  }
+  #underText {
+    position: relative;
+    width: 37.65%;
+    left: 31.175%;
+    margin-bottom: 7.692%;
+  }
+
+}
+@media only screen and (max-width: 415px){
+
+
+}
