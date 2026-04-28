@@ -121,6 +121,7 @@ body {
   max-width: 1080px;
   max-height: 1080px;
   aspect-ratio: 1/1;
+  overflow: hidden;
 }
 .image {
   position: absolute;
@@ -151,20 +152,38 @@ body {
   width: 100%;
 }
 
-#bg-bazar-square {
+.bg {
   position: absolute;
   z-index: 0;
-  left: auto;
+  left: -5%;
   top: auto;
-  width: 100%;
+  width: 110%;
+  object-fit: cover;
+  transition: transform 0.1s linear;
 }
 
 #gorodovoi {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   left: 10%;
   top: 7%;
   width: 35%;
+  cursor: pointer;
+}
+
+.particle {
+  position: fixed;
+  z-index: 12;
+  width: 30px;
+  pointer-events: none;
+  animation: explode 0.8s forwards ease-out;
+}
+
+@keyframes explode {
+  to {
+    transform: translate(var(--x), var(--y)) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 #ochumelov {
@@ -173,6 +192,20 @@ body {
   left: 45%;
   top: 29%;
   width: 57%;
+}
+
+#ochumelov {
+  display: inline-block;
+  animation: swing 2s infinite ease-in-out;
+  transform-origin: right center; /* точка вращения */
+}
+
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 @media only screen and (min-width: 480px){
