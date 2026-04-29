@@ -141,6 +141,7 @@ body {
   top: auto;
   width: 100%;
   mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 #bg {
@@ -153,10 +154,12 @@ body {
 
 #bazar_square {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   left: 80.5%;
   top: 21%;
   width: 18%;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 #flowerbed {
@@ -165,6 +168,7 @@ body {
   left: 28%;
   top: 32%;
   width: 30%;
+  cursor: pointer;
 }
 
 #indicator {
@@ -177,11 +181,14 @@ body {
 
 #wonderful_country {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   left: 60.2%;
   top: 6%;
   width: 20%;
+  pointer-events: auto;
+  cursor: pointer;
 }
+
 
 @media only screen and (min-width: 480px){
   #content-mobile #heading-mobile {
