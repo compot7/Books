@@ -141,6 +141,7 @@ body {
   top: auto;
   width: 100%;
   mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 #bg {
@@ -159,17 +160,46 @@ body {
   width: 45%;
 }
 
-#stars {
-  position: absolute;
-  z-index: 3;
-  left: 7%;
-  top: 5%;
-  width: 82%;
-}
 
+
+#star1 {
+  position: absolute;
+  z-index: 5;
+  left: 9%;
+  top: 5%;
+  width: 12%;
+}
+#star2 {
+  position: absolute;
+  z-index: 4;
+  left: 65%;
+  top: 19%;
+  width: 11%;
+}
+#star3 {
+  position: absolute;
+  z-index: 4;
+  left: 61%;
+  top: 57%;
+  width: 5%;
+}
+#star4 {
+  position: absolute;
+  z-index: 4;
+  left: 83%;
+  top: 62%;
+  width: 6%;
+}
+#star5 {
+  position: absolute;
+  z-index: 4;
+  left: 13%;
+  top: 85%;
+  width: 6%;
+}
 #witch_hat {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 74%;
   top: 53%;
   width: 22%;
@@ -196,6 +226,51 @@ body {
   top: 74%;
   width: 26%;
 }
+
+#scene.shake {
+  animation: shakeStrong 0.4s infinite;
+}
+
+@keyframes shakeStrong {
+  0%   { transform: translate(0, 0) scale(1.05); }
+  20%  { transform: translate(-12px, 10px) scale(1.05); }
+  40%  { transform: translate(12px, -10px) scale(1.05); }
+  60%  { transform: translate(-12px, -10px) scale(1.05); }
+  80%  { transform: translate(12px, 10px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1.05); }
+}
+
+
+
+#scene {
+  position: relative; /* 👈 важно */
+}
+
+#star-counter {
+  color: #FFF8EB;
+  font-family: "PT Astra Sans";
+  font-size: 64px;
+  background: rgba(0,0,0,0.5);
+  letter-spacing: 5px;
+
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  z-index: 999;
+}
+
+#star-counter.show {
+  opacity: 1;
+}
+
+
 
 @media only screen and (min-width: 480px){
   #content-mobile #heading-mobile {
