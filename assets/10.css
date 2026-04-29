@@ -141,6 +141,7 @@ body {
   top: auto;
   width: 100%;
   mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 #bg {
@@ -182,6 +183,27 @@ body {
   top: auto;
   width: 100%;
 }
+
+#Doroti_and_dog.swing {
+  animation: swingAnim 0.8s ease-in-out infinite;
+}
+
+@keyframes swingAnim {
+  0%   { transform: rotate(0deg) scale(1.00); }
+  25%  { transform: rotate(-5deg) scale(1.10); }
+  50%  { transform: rotate(5deg) scale(1.15); }
+  75%  { transform: rotate(-3deg) scale(1.10); }
+  100% { transform: rotate(0deg) scale(1.00); }
+}
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 480px){
