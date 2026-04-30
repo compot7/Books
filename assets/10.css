@@ -136,7 +136,7 @@ body {
 
 #texture {
   position: absolute;
-  z-index: 10;
+  z-index: 11;
   left: auto;
   top: auto;
   width: 100%;
@@ -152,13 +152,7 @@ body {
   width: 100%;
 }
 
-#dog_appears {
-  position: absolute;
-  z-index: 4;
-  left: 87%;
-  top: 45%;
-  width: 13%;
-}
+
 
 #Doroti_and_dog {
   position: absolute;
@@ -197,6 +191,65 @@ body {
 }
 
 
+
+#dog_appears {
+  position: absolute;
+  width: 180px;
+  z-index: 5;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#dog_appears.right {
+  right: 0;
+  transform: translateX(100%);
+}
+/* слева */
+#dog_appears.left {
+  left: 0;
+  transform: translateX(-100%) scaleX(-1);
+}
+
+/* когда появляется */
+#dog_appears.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* выезд */
+#dog_appears.show.right {
+  transform: translateX(0%);
+}
+#dog_appears.show.left {
+  transform: translateX(0%) scaleX(-1);
+}
+
+
+
+
+.heart {
+  pointer-events: none;
+  animation: heartFloat 1.5s ease-out forwards;
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
+  }
+}
 
 
 
