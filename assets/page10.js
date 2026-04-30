@@ -54,7 +54,7 @@ function spawnDog() {
 
 // запуск раз в случайное время
 function randomDogLoop() {
-  const delay = 3000 + Math.random() * 5000;
+  const delay = 8000 + Math.random() * 5000;
 
   dogTimeout = setTimeout(() => {
     spawnDog();

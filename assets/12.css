@@ -141,6 +141,7 @@ body {
   top: auto;
   width: 100%;
   mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 #bg {
@@ -161,10 +162,11 @@ body {
 
 #cat {
   position: absolute;
-  z-index: 3;
+  z-index: 6;
   left: 13%;
   top: 50.5%;
   width: 30%;
+  cursor: pointer;
 }
 
 #home {
@@ -175,14 +177,14 @@ body {
   width: 100%;
 }
 
-#balcony {
+#balcon-pokos {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 6%;
   top: 41.7%;
   width: 40%;  
+  cursor: pointer;
 }
-
 
 @media only screen and (min-width: 480px){
   #content-mobile #heading-mobile {
