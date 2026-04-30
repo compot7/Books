@@ -141,6 +141,7 @@ body {
   top: auto;
   width: 100%;
   mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 #bg {
@@ -178,9 +179,9 @@ body {
 #dog {
   position: absolute;
   z-index: 3;
-  left: 60%;
-  top: 61%;
-  width: 20%;
+  left: 61%;
+  top: 62.5%;
+  width: 21%;
 }
 
 @media only screen and (min-width: 480px){
