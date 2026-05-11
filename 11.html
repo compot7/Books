@@ -104,6 +104,7 @@
     <script type="module" crossorigin src="./assets/main2.js"></script>
     <link rel="stylesheet" href="./assets/main.css">
     <link rel="stylesheet" href="./assets/11.css">
+    <script src="./assets/11.js" defer></script>
 </head>
 
 <body>
@@ -349,10 +350,10 @@
                     </p>
                     <div class="arrows">
                         <img src="assets\img\texture.png" alt="texture" id="texture" class="texture">
-                        <img src="assets/img/page-11/arrow-1.png" alt="arrow-1" id="arrow-1" class="arrow-1">
-                        <img src="assets/img/page-11/arrow-2.png" alt="arrow-2" id="arrow-2" class="arrow-2">
-                        <img src="assets/img/page-11/arrow-3.png" alt="arrow-3" id="arrow-3" class="arrow-3">
-                        <img src="assets/img/page-11/arrow-4.png" alt="arrow-4" id="arrow-4" class="arrow-4">
+                        <img src="assets/img/page-11/arrow-1.png" alt="arrow-1" id="arrow-1" class="arrow-1" onmousedown="move('right')" onmouseup="stopMove()">
+                        <img src="assets/img/page-11/arrow-2.png" alt="arrow-2" id="arrow-2" class="arrow-2" onmousedown="move('left')" onmouseup="stopMove()">
+                        <img src="assets/img/page-11/arrow-3.png" alt="arrow-3" id="arrow-3" class="arrow-3" onmousedown="move('down')" onmouseup="stopMove()">
+                        <img src="assets/img/page-11/arrow-4.png" alt="arrow-4" id="arrow-4" class="arrow-4" onmousedown="move('up')" onmouseup="stopMove()">
                     </div>
                     <!--<img id="underText"  src="./assets/img/page-1/UnderTextPicture.png" alt="Twig"/> -->
                 </div>
@@ -360,9 +361,20 @@
         </div>
         <div id="scene" class="scene">
             <!--<img src="" alt="" id="" class="">-->
-            <img src="assets\img\texture.png" alt="texture" id="texture" class="texture">
-            <img src="assets/img/page-11/dog.png" alt="dog" id="dog" class="dog">
+            <img src="assets/img/texture.png" alt="texture" id="texture" class="texture">
+            <img src="assets/img/page-11/dog1.png" alt="dog" id="dog" class="dog">
             <img src="assets/img/page-11/bg.png" alt="bg" id="bg" class="bg">
+                <div class="wall" id="wall1"></div>
+                <div class="wall" id="wall2"></div>
+                <div class="wall" id="wall3"></div>
+                <div class="wall" id="wall4"></div>
+                <div class="wall" id="wall5"></div>
+                <div class="wall" id="wall6"></div>
+                <div class="wall" id="wall7"></div>
+                <div class="wall" id="wall8"></div>
+                <div class="wall" id="wall9"></div>
+                <div class="wall" id="wall10"></div>
+                <div class="wall" id="wall11"></div>
         </div>
         <script src="./assets/page1.js"></script>
 
@@ -403,7 +415,6 @@
                 </div>
             </section>
         </div>
-
     </main>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/104276774" style="position:absolute; left:-9999px;" alt="" /></div>

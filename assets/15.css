@@ -157,30 +157,75 @@ body {
   left: 20%;
   top: 35.5%;
   width: 65%;
+  animation: breathe 2.5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1.03);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+.fade-img {
+  position: absolute;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
 }
 
 #cloud-1 {
   position: absolute;
-  z-index: 3;
-  left: auto;
+  z-index: 11;
+  left: 60%;
   top: auto;
-  width: 100%;
+  width: 40%;
+  animation-delay: 0s;
 }
 
 #cloud-2 {
   position: absolute;
-  z-index: 3;
-  left: auto;
-  top: auto;
-  width: 100%;
+  z-index: 11;
+  left: 60%;
+  top: 67%;
+  width: 40%;
+  animation-delay: 1s;
 }
 
 #cloud-3 {
   position: absolute;
-  z-index: 3;
+  z-index: 11;
   left: auto;
-  top: auto;
-  width: 100%;
+  top: 67%;
+  width: 40%;
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 @media only screen and (min-width: 480px){
