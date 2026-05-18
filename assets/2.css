@@ -81,23 +81,14 @@ body {
 
 }
 
-.Letter {
-  position: relative;
-  top: 6.2%;
-  width: 12.518%;
-  height: auto;
-  aspect-ratio: 1/1;
-
-}
 #Letter1 {
-  position: absolute;
-  left: auto;
-  top: auto;
-  width: 100%;
-  z-index: 4;
-  bottom: 30%;
-
+  position: relative;
+  display: inline-block;
+  top: 7px;
+  left: 1%;
+  width: 10%;
 }
+
 #LetterImg {
   position: absolute;
   right: -80%;
@@ -224,14 +215,13 @@ body {
       box-sizing: border-box;
       margin-bottom: 15%;
   }
-  .Letter {
-    position: relative;
-    top: 6%;
-    width: 15.518%;
-    height: auto;
-    aspect-ratio: 1/1;
-
-  }
+  #Letter1 {
+  position: relative;
+  display: inline-block;
+  top: 7px;
+  left: 2.5%;
+  width: 10%;
+ }
 }
 @media only screen and (max-width: 480px){
   main {
@@ -285,15 +275,15 @@ body {
     aspect-ratio: 1/1;
 
   }
+
   #Letter1 {
-    position: absolute;
-    left: auto;
-    top: 1%;
-    width: 90%;
-    z-index: 4;
+  position: relative;
+  display: inline-block;
+  top: 7px;
+  left: 2%;
+  width: 10%;
+ }
 
-
-  }
   #LetterTwig {
     position: absolute;
     right: -80%;

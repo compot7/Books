@@ -81,23 +81,14 @@ body {
 
 }
 
-.Letter {
-  position: relative;
-  top: 8.2%;
-  width: 13.518%;
-  height: auto;
-  aspect-ratio: 1/1;
-
-}
 #Letter1 {
-  position: absolute;
-  left: auto;
-  top: auto;
-  width: 100%;
-  z-index: 4;
-  bottom: 30%;
-
+  position: relative;
+  display: inline-block;
+  top: 6px;
+  left: 0.5%;
+  width: 10%;
 }
+
 #LetterImg {
   position: absolute;
   right: -80%;
@@ -381,23 +372,6 @@ body {
       font-size: calc(18px + 4 * ((100vw - 360px) / (480 - 360)));
       box-sizing: border-box;
       margin-bottom: 10%;
-  }
-  .Letter {
-    position: relative;
-    top: 9%;
-    width: 15.518%;
-    height: auto;
-    aspect-ratio: 1/1;
-
-  }
-  #Letter1 {
-    position: absolute;
-    left: 27%;
-    top: 1%;
-    width: 90%;
-    z-index: 4;
-
-
   }
   #LetterTwig {
     position: absolute;
